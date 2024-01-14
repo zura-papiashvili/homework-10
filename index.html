@@ -11,7 +11,7 @@
 
 <body class="container">
     <header class="border-bottom border-1 mb-4">
-        <nav class="navbar bg-body-tertiary">
+        <nav class="navbar bg-body-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png"
@@ -33,6 +33,10 @@
                             <a class="navbar-brand">Pricing</a>
                         </li>
                     </ul>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="btnSwitch">
+                        <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -40,13 +44,11 @@
 
     <main>
         <h1 class="fs-1 text-center">Pricing</h1>
-
         <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti saepe consequuntur
             excepturi fugiat vero
-            quibusdam autem assumenda molestiae, aperiam similique!</p>
-
-
-        <div class="d-flex p-2 gap-4 flex-wrap">
+            quibusdam autem assumenda molestiae, aperiam similique!
+        </p>
+        <div class="d-flex p-2 gap-4 flex-wrap justify-content-center">
             <div class="card" style="width: 13rem;">
                 <div class="bg-light  text-center p-2 border-bottom border-1 ">
                     Free
@@ -86,15 +88,91 @@
 
     </main>
 
-    <footer>
+    <footer class="text-center mt-4 pt-4 border-top border-1 ">
 
+
+        <div class="container p-4">
+            <div class="row">
+                <div class="col">
+                    <p>© 2015 Company, Inc.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3" style="letter-spacing: 2px; color: #7f4722;">Features</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">cool stuff</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Random feature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">team feature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">stuff for developers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Another one</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">last time</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3" style="letter-spacing: 2px; color: #7f4722;">Resources</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Resource</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Resource name</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Another Resource</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Final Resource</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3" style="letter-spacing: 2px; color: #7f4722;">About</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Locations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Teams</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 
-
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    <!-- Switch Theme -->
+    <script>
+        document.getElementById('btnSwitch').addEventListener('click', () => {
+            if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+                document.documentElement.setAttribute('data-bs-theme', 'light')
+            }
+            else {
+                document.documentElement.setAttribute('data-bs-theme', 'dark')
+            }
+        })
+    </script>
 
 </body>
 
